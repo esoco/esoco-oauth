@@ -10,7 +10,7 @@ repositories
 
 dependencies 
 {
- 	if (project(':ObjectRelations').getProjectDir().exists())
+ 	if (project(':esoco-business').getProjectDir().exists())
 	{
 		compile project(':esoco-business')
 	}
@@ -24,12 +24,9 @@ dependencies
 }
 
 // disabled Java 8 doclint for Javadoc
-if (JavaVersion.current().isJava8Compatible()) 
-{
-	allprojects
-	{
-		tasks.withType(Javadoc)
-		{
+if (JavaVersion.current().isJava8Compatible()) {
+	allprojects	{
+		tasks.withType(Javadoc) {
         	options.addStringOption('Xdoclint:none', '-quiet')
 		}
 	}
