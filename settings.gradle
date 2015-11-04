@@ -1,0 +1,14 @@
+include ':esoco-common'
+project(':esoco-common').projectDir = new File('../esoco-common')
+
+include ':ObjectRelations'
+project(':ObjectRelations').projectDir = new File('../ObjectRelations')
+
+include ':esoco-lib'
+project(':esoco-lib').projectDir = new File('../esoco-lib')
+
+include ':esoco-storage'
+project(':esoco-storage').projectDir = new File('../esoco-storage')
+
+include ':esoco-business'
+project(':esoco-business').projectDir = new File('../esoco-business')
