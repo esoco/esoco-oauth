@@ -23,12 +23,10 @@ dependencies
     testCompile 'junit:junit:4.+'
 }
 
-// disabled Java 8 doclint for Javadoc
-if (JavaVersion.current().isJava8Compatible()) {
-	allprojects	{
-		tasks.withType(Javadoc) {
-        	options.addStringOption('Xdoclint:none', '-quiet')
-		}
+eclipse {
+	jdt { 
+		sourceCompatibility = "1.7"
+		targetCompatibility = "1.7"
 	}
 }
 
