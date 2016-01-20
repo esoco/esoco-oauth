@@ -9,7 +9,7 @@ targetCompatibility = 1.7
 repositories
 {
     jcenter()
-    maven { url "https://raw.github.com/fernandezpablo85/scribe-java/mvn-repo/" }
+    
 }
 
 dependencies 
@@ -22,7 +22,6 @@ dependencies
 	{
 		compile 'de.esoco:esoco-business:1.+'
 	}
-    
     compile 'org.scribe:scribe:1.3.7'
     testCompile 'junit:junit:4.+'
 }
