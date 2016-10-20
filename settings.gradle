@@ -4,10 +4,6 @@ def baseProjects = [':esoco-common',':objectrelations',':esoco-lib',
 					':esoco-storage',':esoco-business']
 
 baseProjects.each { projectName ->
-	def projectDir = new File("../${projectName.substring(1)}")
-
-	if (projectDir.exists()) {
-		include projectName
-		project(projectName).projectDir = projectDir
-	}
+	include projectName
+	project(projectName).projectDir = new File("../${projectName.substring(1)}")
 }
