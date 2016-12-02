@@ -5,6 +5,5 @@ def baseProjects = [':esoco-common',':objectrelations',':esoco-lib',
 
 baseProjects.each { projectName ->
 	include projectName
-	def projectDir = new File("../../sdack/${projectName.substring(1)}")
-	project(projectName).projectDir = projectDir
+	project(projectName).projectDir = new File("../../sdack/${projectName.substring(1)}")
 }
