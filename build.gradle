@@ -1,12 +1,5 @@
 buildscript {
     repositories { jcenter() }
-    dependencies { classpath 'com.jfrog.bintray.gradle:gradle-bintray-plugin:1.7' }
-}
-apply plugin: 'com.jfrog.bintray'
-apply plugin: 'maven'
-
-buildscript {
-    repositories { jcenter() }
     dependencies { classpath 'de.richsource.gradle.plugins:gwt-gradle-plugin:0.6' }
 }
 apply plugin: 'gwt-base'
@@ -23,10 +16,10 @@ targetCompatibility = 1.7
 repositories
 {
     jcenter()
-    
+
 }
 
-dependencies 
+dependencies
 {
  	if (project(':esoco-business').getProjectDir().exists())
 	{
@@ -53,23 +46,4 @@ task javadocJar(type: Jar, dependsOn: javadoc) {
 artifacts {
     archives sourceJar
     archives javadocJar
-}
-
-bintray {
-	user = project.hasProperty('bintrayUser') ? 
-				project.property('bintrayUser') : 
-				System.getenv('BINTRAY_USER')
-	key = project.hasProperty('bintrayApiKey') ? 
-				project.property('bintrayApiKey') : 
-				System.getenv('BINTRAY_API_KEY')
-    configurations = ['archives']
-    publish = true
-
-	pkg {
-		repo = 'sdack'
-		name = project.name
-		version {
-			name = project.version
-	    }
-    }
 }
