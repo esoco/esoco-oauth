@@ -1,12 +1,12 @@
 //++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
 // This file is a part of the 'esoco-oauth' project.
-// Copyright 2016 Elmar Sonnenschein, esoco GmbH, Flensburg, Germany
+// Copyright 2017 Elmar Sonnenschein, esoco GmbH, Flensburg, Germany
 //
-// Licensed under the Apache License, Version 3.0 (the "License");
+// Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
 // You may obtain a copy of the License at
 //
-//	  http://www.apache.org/licenses/LICENSE-3.0
+//	  http://www.apache.org/licenses/LICENSE-2.0
 //
 // Unless required by applicable law or agreed to in writing, software
 // distributed under the License is distributed on an "AS IS" BASIS,
@@ -190,7 +190,7 @@ public class GoogleApi20 extends DefaultApi20
 	 * Google OAuth2.0 Released under the same license as scribe (MIT License)
 	 *
 	 * @author yincrash
-	 * @see    https://gist.github.com/yincrash/2465453
+	 * @see    "https://gist.github.com/yincrash/2465453"
 	 */
 	private class GoogleServiceImpl extends OAuth20ServiceImpl
 	{
