@@ -3,6 +3,20 @@ language: java
 jdk:
   - oraclejdk8
 
+git:
+  depth: 3
+
+install:
+  - pushd ../.. 
+  - mkdir sdack
+  - cd sdack
+  - git clone -b ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} --depth 3 https://github.com/esoco/esoco-common
+  - git clone -b ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} --depth 3 https://github.com/esoco/objectrelations
+  - git clone -b ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} --depth 3 https://github.com/esoco/esoco-lib
+  - git clone -b ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} --depth 3 https://github.com/esoco/esoco-storage
+  - git clone -b ${TRAVIS_PULL_REQUEST_BRANCH:-$TRAVIS_BRANCH} --depth 3 https://github.com/esoco/esoco-business
+  - popd
+
 before_cache:
   - rm -f  $HOME/.gradle/caches/modules-2/modules-2.lock
   - rm -fr $HOME/.gradle/caches/*/plugin-resolution/
